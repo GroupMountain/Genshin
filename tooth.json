@@ -1,20 +1,103 @@
 {
-    "format_version": 2,
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
     "tooth": "github.com/GroupMountain/Genshin",
     "version": "1.0.0",
     "info": {
         "name": "Genshin",
-        "description": "Download and Install Genshin on Your Device",
-        "author": "GroupMountain",
-        "tags": [
-            "genshin",
-            "game"
-        ]
+        "description": "Download and install Genshin",
+        "tags": ["game:genshin"],
+        "avatar_url": "https://ys.mihoyo.com/main/favicon.ico"
     },
-    "commands": {
-        "post_install": [
-            "start https://ys.mihoyo.com/cloud/?autobegin=1"
-        ]
-    },
-    "files": {}
+    "variants": [
+        {
+            "platform": "win-x64",
+            "dependencies": {
+              "github.com/GroupMountain/Genshin#launcher": "{{version}}",
+              "github.com/GroupMountain/Genshin#cloudgame": "{{version}}",
+              "github.com/GroupMountain/Genshin#biligame": "{{version}}",
+              "github.com/GroupMountain/Genshin#launcherglobal": "{{version}}"
+            }
+        },
+        {
+            "label": "launcher",
+            "platform": "win-x64",
+            "assets": [
+                {
+                    "type" : "uncompressed",
+                    "urls" : ["https://autopatchcn.yuanshen.com/client_app/download/launcher/20241225164539_9oyGHAOXvzP4uaBW/mihoyo/yuanshen_setup_202412201736.exe"],
+                    "placements": [
+                        {
+                          "type": "file",
+                          "src": "",
+                          "dest": "yuanshen_launcher.exe"
+                        }
+                      ]
+                }
+            ],
+            "scripts": {
+                "post_install": [".\\yuanshen_launcher.exe"]
+            }
+        },
+        {
+            "label": "cloudgame",
+            "platform": "win-x64",
+            "assets": [
+                {
+                    "type" : "uncompressed",
+                    "urls" : ["https://autopatchcn.yuanshen.com/client_app/download/cloudgame/pc/20250317165755_KdSbj51HpnPYNrpc/cbu102/yscloud_5.5.0.exe"],
+                    "placements": [
+                        {
+                          "type": "file",
+                          "src": "",
+                          "dest": "yuanshen_cloudgame.exe"
+                        }
+                      ]
+                }
+            ],
+            "scripts": {
+                "post_install": [".\\yuanshen_cloudgame.exe"]
+            }
+        },
+        {
+            "label": "biligame",
+            "platform": "win-x64",
+            "assets": [
+                {
+                    "type" : "uncompressed",
+                    "urls" : ["https://pkg.biligame.com/games/yuanshen_setup_202412201837/888966/yuanshen_setup_202412201837.exe"],
+                    "placements": [
+                        {
+                          "type": "file",
+                          "src": "",
+                          "dest": "yuanshen_biligame.exe"
+                        }
+                      ]
+                }
+            ],
+            "scripts": {
+                "post_install": [".\\yuanshen_biligame.exe"]
+            }
+        },
+        {
+            "label": "launcherglobal",
+            "platform": "win-x64",
+            "assets": [
+                {
+                    "type" : "uncompressed",
+                    "urls" : ["https://download-porter.hoyoverse.com/download-porter/2025/01/02/GenshinImpact_install_202412201651.exe"],
+                    "placements": [
+                        {
+                          "type": "file",
+                          "src": "",
+                          "dest": "yuanshen_launcherglobal.exe"
+                        }
+                      ]
+                }
+            ],
+            "scripts": {
+                "post_install": [".\\yuanshen_launcherglobal.exe"]
+            }
+        }
+    ]
 }
