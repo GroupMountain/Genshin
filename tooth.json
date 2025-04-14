@@ -25,7 +25,7 @@
             "assets": [
                 {
                     "type" : "uncompressed",
-                    "urls" : ["https://autopatchcn.yuanshen.com/client_app/download/launcher/20241225164539_9oyGHAOXvzP4uaBW/mihoyo/yuanshen_setup_202412201736.exe"],
+                    "urls" : ["https://autopatchcn.yuanshen.com/client_app/download/launcher/20250317181110_rtA8y57iZNFVnGJx/mihoyo/yuanshen_setup_202503072031.exe"],
                     "placements": [
                         {
                           "type": "file",
@@ -85,7 +85,7 @@
             "assets": [
                 {
                     "type" : "uncompressed",
-                    "urls" : ["https://download-porter.hoyoverse.com/download-porter/2025/01/02/GenshinImpact_install_202412201651.exe"],
+                    "urls" : ["https://download-porter.hoyoverse.com/download-porter/2025/03/27/GenshinImpact_install_202503072011.exe"],
                     "placements": [
                         {
                           "type": "file",
